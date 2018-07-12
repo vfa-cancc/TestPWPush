@@ -56,6 +56,20 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="richUrl"
             android:id="@+id/txtRichurl" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="action"
+            android:id="@+id/textAction"
+            android:textColor="#FF0B0E51" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/txtAction" />
 
         <TextView
             android:layout_width="wrap_content"

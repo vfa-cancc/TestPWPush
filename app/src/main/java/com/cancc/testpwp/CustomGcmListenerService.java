@@ -25,6 +25,7 @@ public class CustomGcmListenerService extends NCMBGcmListenerService {
         if(data.containsKey("com.nifty.Dialog")) {
 
             NCMBDialogPushConfiguration dialogPushConfiguration = new NCMBDialogPushConfiguration();
+            dialogPushConfiguration.setDisplayType(NCMBDialogPushConfiguration.DIALOG_DISPLAY_DIALOG);
             if (data.containsKey("com.nifty.Data")) {
                 try {
                     JSONObject json = new JSONObject(data.getString("com.nifty.Data"));
@@ -44,7 +45,6 @@ public class CustomGcmListenerService extends NCMBGcmListenerService {
                                 dialogPushConfiguration.setDisplayType(NCMBDialogPushConfiguration.DIALOG_DISPLAY_ORIGINAL);
                                 break;
                             default:
-                                dialogPushConfiguration.setDisplayType(NCMBDialogPushConfiguration.DIALOG_DISPLAY_DIALOG);
                                 break;
                         }
                     }

@@ -290,11 +290,6 @@
                     android:layout_column="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-                <!--<EditText-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:id="@+id/txtPrefecture"-->
-                    <!--android:layout_column="2" />-->
             </TableRow>
 
             <TableRow

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView _pushId;
     TextView _richurl;
+    TextView _action;
     Button _btnGetInstallation;
 
     @Override
@@ -140,6 +141,10 @@ public class MainActivity extends AppCompatActivity {
         _richurl = (TextView) findViewById(R.id.txtRichurl);
         String richurl = intent.getStringExtra("com.nifty.RichUrl");
         _richurl.setText(richurl);
+
+        _action = (TextView) findViewById(R.id.txtAction);
+        String action = intent.getStringExtra("action");
+        _action.setText(action);
 
         //プッシュ通知のペイロードを表示
         if (intent.getStringExtra("com.nifty.Data") != null) {
