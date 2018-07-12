@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cancc.testpwp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.cancc.testpwp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.cancc.testpwp.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.nifty.cloud.mb.core.NCMBApplicationController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- プッシュ通知タップ時に起動するActivityの設定 -->
+        <meta-data
+            android:name="openPushStartActivity"
+            android:value=".MainActivity" />
+
+        <!-- 通知エリアに表示されるアイコンの設定 -->
+        <meta-data
+            android:name="smallIcon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <!-- 通知エリアにプッシュ通知を複数表示する設定　0:最新のみ表示 , 1:複数表示 -->
+        <meta-data
+            android:name="notificationOverlap"
+            android:value="0" />
+        <!--<meta-data-->
+            <!--android:name="com.nifty.cloud.mb.DOMAIN_URL"-->
+            <!--android:value="https://dev.mb.api.cloud.nifty.com/" />-->
+
+        <meta-data android:name="dialogPushBackgroundImage" android:resource="@mipmap/ic_launcher"/>
+
+        <activity
+            android:name="com.cancc.testpwp.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.nifty.cloud.mb.core.NCMBGcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.cancc.testpwp" />
+            </intent-filter>
+        </receiver>
+
+        <!-- <service -->
+        <!-- android:name="com.nifty.cloud.mb.core.NCMBGcmListenerService" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE"/> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+
+        <service
+            android:name="com.cancc.testpwp.CustomGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.cancc.testpwp.InstallationActivity"/>
+        <activity android:name="com.cancc.testpwp.ChannelActivity"/>
+        <activity
+            android:name="com.nifty.cloud.mb.core.NCMBDialogActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
+        </activity>
+
+    </application>
+
+</manifest>

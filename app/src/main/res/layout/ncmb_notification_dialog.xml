@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dip">
+            <TextView
+                android:id="@+id/ncmb_dialog_subject_id"
+                android:text="fasd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="15dip"
+                android:paddingTop="15dip"
+                android:paddingRight="20dip"
+                android:paddingBottom="15dip"/>
+            <TextView
+                android:id="@+id/ncmb_dialog_message_id"
+                android:text="fasd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/ncmb_dialog_subject_id"
+                android:paddingLeft="15dip"
+                android:paddingTop="15dip"
+                android:paddingRight="20dip"
+                android:paddingBottom="15dip"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dip">
+        <Button
+            android:id="@+id/ncmb_button_close"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:text="Close"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/ncmb_button_open"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:text="Open"
+            android:gravity="center"/>
+    </RelativeLayout>
+</LinearLayout>
