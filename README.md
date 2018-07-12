@@ -1,10 +1,10 @@
 # TestPWPush
 
-### Normal push (Title, Message)
+#### Normal push (Title, Message)
 
-### Push with json data (Title, Message, User Setting Value (JSON))
+#### Push with json data (Title, Message, User Setting Value (JSON))
 
-### Rich Push (Title, Message, URL)
+#### Rich Push (Title, Message, URL)
 
 #### Test channel: Create channel with name "Ch1" for your device token in installation class
 
@@ -29,5 +29,5 @@ NCMBDialogPushConfiguration.DIALOG_DISPLAY_BACKGROUND = 2
 
 NCMBDialogPushConfiguration.DIALOG_DISPLAY_ORIGINAL = 4
 
-### Push with Delivery-Time (Title, Message, Delivery Time)
+#### Push with Delivery-Time (Title, Message, Delivery Time)
 
